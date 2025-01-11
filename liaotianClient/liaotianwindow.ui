@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LiaotianWindow</class>
+ <widget class="QMainWindow" name="LiaotianWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>601</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widget_2{
+	background-color: rgb(242, 242, 242);
+	border: 1px solid rgb(58, 59, 60);
+	border-radius: 15px;
+}</string>
+    </property>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>701</width>
+       <height>551</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="verticalSpacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QTextEdit" name="editOut">
+        <property name="styleSheet">
+         <string notr="true">	background-color: rgb(242, 242, 242);
+	border: 1px solid rgb(222, 215, 208);
+</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QTextEdit" name="editIn">
+        <property name="styleSheet">
+         <string notr="true">	background-color: rgb(242, 242, 242);
+	border: 1px solid rgb(222, 215, 208);
+</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QToolButton" name="btnSend">
+          <property name="text">
+           <string>发送</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QToolButton" name="btnClose">
+     <property name="geometry">
+      <rect>
+       <x>750</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton{
+	border: none;
+	
+	background-color: rgba(0 , 0, 0, 0);
+}
+QToolButton:hover{
+	background-color: rgb(255, 0 , 0);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resourse.qrc">
+       <normaloff>:/res/close.png</normaloff>:/res/close.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resourse.qrc"/>
+ </resources>
+ <connections/>
+</ui>
