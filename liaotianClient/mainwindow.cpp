@@ -10,7 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
     setWindowFlag(Qt::FramelessWindowHint);//设置窗口无边框
     setFixedSize(width(),height());//设置固定大小
     setAttribute(Qt::WA_TranslucentBackground);// 设置窗口支持透明背景
-    liaotianPage=new LiaotianWindow(this);
+    liaotianPage=new LiaotianWindow();
+    zhucePage=new zhuceMainWindow();
 }
 
 MainWindow::~MainWindow()
@@ -40,17 +41,36 @@ void MainWindow::on_btnArticle_clicked(bool checked)
     }
 }
 
-
 void MainWindow::on_btnSignIn_clicked()
 {
     this->hide();
     this->liaotianPage->show();
-    this->liaotianPage->myName=ui->editUser->text();
 }
-
 
 void MainWindow::on_btnClose_clicked()
 {
     QApplication::quit();
+}
+
+void MainWindow::on_btnSignUp_clicked()
+{
+    this->hide();
+    this->zhucePage->show();
+}
+
+void MainWindow::on_editUser_selectionChanged()
+{
+    if(ui->editUser->text()=="输入QQ号")
+        ui->editUser->clear();
+}
+
+void MainWindow::on_editPassword_selectionChanged()
+{
+    if(ui->editPassword->text()=="输入QQ密码")
+    {
+        ui->editPassword->clear();
+        ui->editPassword->setEchoMode(QLineEdit::Password);
+    }
+
 }
 

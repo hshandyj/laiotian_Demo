@@ -145,7 +145,7 @@ public:
         btnSignIn->setObjectName("btnSignIn");
         btnSignIn->setEnabled(false);
         btnSignIn->setMinimumSize(QSize(0, 40));
-        btnSignIn->setStyleSheet(QString::fromUtf8("border:none;\n"
+        btnSignIn->setStyleSheet(QString::fromUtf8("\n"
 "background-color: rgb(170, 214, 255);\n"
 "border-radius:10px;\n"
 "color: rgb(255, 255, 255);\n"

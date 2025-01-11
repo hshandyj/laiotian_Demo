@@ -4,5 +4,6 @@
         <file>res/close.png</file>
         <file>res/Search.png</file>
         <file>res/touxiang.png</file>
+        <file>res/zhuce.png</file>
     </qresource>
 </RCC>

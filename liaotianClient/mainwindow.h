@@ -1,10 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QContextMenuEvent>
 #include <QMouseEvent>
 #include <QMainWindow>
 
+#include "zhucemainwindow.h"
 #include "liaotianwindow.h"
 
 QT_BEGIN_NAMESPACE
@@ -32,11 +32,20 @@ private slots:
 
     void on_btnClose_clicked();
 
+    void on_btnSignUp_clicked();
+
+
+    void on_editUser_selectionChanged();
+
+    void on_editPassword_selectionChanged();
+
 private:
     Ui::MainWindow *ui;
     //拖动窗口
     QPoint mOffset;
-    //存储第二个窗口的指针
+    //存储聊天窗口的指针
     LiaotianWindow* liaotianPage;
+    //存储注册界面指针
+    zhuceMainWindow* zhucePage;
 };
 #endif // MAINWINDOW_H

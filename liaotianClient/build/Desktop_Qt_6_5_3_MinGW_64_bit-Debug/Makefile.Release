@@ -119,7 +119,8 @@ release/qrc_resourse.cpp: ../../resourse.qrc \
 		../../res/touxiang.png \
 		../../res/background.png \
 		../../res/Search.png \
-		../../res/close.png
+		../../res/close.png \
+		../../res/zhuce.png
 	D:\lerning_application\QT6\6.5.3\mingw_64\bin\rcc.exe -name resourse --no-zstd ..\..\resourse.qrc -o release\qrc_resourse.cpp
 
 compiler_moc_predefs_make_all: release/moc_predefs.h
@@ -1475,7 +1476,36 @@ release/zhucemainwindow.o: ../../zhucemainwindow.cpp ../../zhucemainwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/QTransform \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qnativeinterface.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qtabwidget.h \
-		ui_zhucemainwindow.h
+		ui_zhucemainwindow.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/QApplication \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qapplication.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcoreapplication.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qeventloop.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfuture.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfutureinterface.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qmutex.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qtsan_impl.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qresultstore.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfuture_impl.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qthreadpool.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qthread.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdeadlinetimer.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qelapsedtimer.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qrunnable.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qexception.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qpromise.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qguiapplication.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qinputmethod.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qguiapplication_platform.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/QGridLayout \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\zhucemainwindow.o ..\..\zhucemainwindow.cpp
 
 release/qrc_resourse.o: release/qrc_resourse.cpp 

@@ -43,17 +43,23 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "",
     "checked",
     "on_btnSignIn_clicked",
-    "on_btnClose_clicked"
+    "on_btnClose_clicked",
+    "on_btnSignUp_clicked",
+    "on_editUser_selectionChanged",
+    "on_editPassword_selectionChanged"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[12];
+    uint offsetsAndSizes[18];
     char stringdata0[11];
     char stringdata1[22];
     char stringdata2[1];
     char stringdata3[8];
     char stringdata4[21];
     char stringdata5[20];
+    char stringdata6[21];
+    char stringdata7[29];
+    char stringdata8[33];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -64,14 +70,20 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(33, 0),  // ""
         QT_MOC_LITERAL(34, 7),  // "checked"
         QT_MOC_LITERAL(42, 20),  // "on_btnSignIn_clicked"
-        QT_MOC_LITERAL(63, 19)   // "on_btnClose_clicked"
+        QT_MOC_LITERAL(63, 19),  // "on_btnClose_clicked"
+        QT_MOC_LITERAL(83, 20),  // "on_btnSignUp_clicked"
+        QT_MOC_LITERAL(104, 28),  // "on_editUser_selectionChanged"
+        QT_MOC_LITERAL(133, 32)   // "on_editPassword_selectionChanged"
     },
     "MainWindow",
     "on_btnArticle_clicked",
     "",
     "checked",
     "on_btnSignIn_clicked",
-    "on_btnClose_clicked"
+    "on_btnClose_clicked",
+    "on_btnSignUp_clicked",
+    "on_editUser_selectionChanged",
+    "on_editPassword_selectionChanged"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -83,7 +95,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -91,12 +103,18 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   32,    2, 0x08,    1 /* Private */,
-       4,    0,   35,    2, 0x08,    3 /* Private */,
-       5,    0,   36,    2, 0x08,    4 /* Private */,
+       1,    1,   50,    2, 0x08,    1 /* Private */,
+       4,    0,   53,    2, 0x08,    3 /* Private */,
+       5,    0,   54,    2, 0x08,    4 /* Private */,
+       6,    0,   55,    2, 0x08,    5 /* Private */,
+       7,    0,   56,    2, 0x08,    6 /* Private */,
+       8,    0,   57,    2, 0x08,    7 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Bool,    3,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -118,6 +136,12 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'on_btnSignIn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_btnClose_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_btnSignUp_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_editUser_selectionChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_editPassword_selectionChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -132,6 +156,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 0: _t->on_btnArticle_clicked((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         case 1: _t->on_btnSignIn_clicked(); break;
         case 2: _t->on_btnClose_clicked(); break;
+        case 3: _t->on_btnSignUp_clicked(); break;
+        case 4: _t->on_editUser_selectionChanged(); break;
+        case 5: _t->on_editPassword_selectionChanged(); break;
         default: ;
         }
     }
@@ -156,13 +183,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 6;
     }
     return _id;
 }
