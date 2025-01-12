@@ -1,0 +1,11 @@
+debug/global.o
+debug/httpmgr.o
+debug/liaotianwindow.o
+debug/main.o
+debug/mainwindow.o
+debug/zhucemainwindow.o
+debug/qrc_resourse.o
+debug/moc_httpmgr.o
+debug/moc_liaotianwindow.o
+debug/moc_mainwindow.o
+debug/moc_zhucemainwindow.o

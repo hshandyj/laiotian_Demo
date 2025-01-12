@@ -1,9 +1,6 @@
 #ifndef ZHUCEMAINWINDOW_H
 #define ZHUCEMAINWINDOW_H
 
-#include <QMouseEvent>
-#include <QMainWindow>
-
 #include "liaotianwindow.h"
 
 namespace Ui {
@@ -21,7 +18,12 @@ public:
     explicit zhuceMainWindow(QWidget *parent = nullptr);
     ~zhuceMainWindow();
 
+
+
+
 private slots:
+    void slot_reg_mod_finish(ReqId id,QString res,ErrorCodes err);
+
     void on_btnExit_clicked();
 
     void on_btnSignup_clicked();
@@ -36,7 +38,14 @@ private slots:
 
     void on_editCode_selectionChanged();
 
+    void on_btnGetCode_clicked();
+
 private:
+    void showTip(QString str,bool ok);
+
+    void initHttpHandlers();
+    QMap<ReqId,std::function<void(const QJsonObject&)> > _handlers;
+
     Ui::zhuceMainWindow *ui;
     //拖动窗口
     QPoint mOffset;

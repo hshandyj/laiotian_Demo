@@ -1,11 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMouseEvent>
-#include <QMainWindow>
-
 #include "zhucemainwindow.h"
-#include "liaotianwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -33,7 +29,6 @@ private slots:
     void on_btnClose_clicked();
 
     void on_btnSignUp_clicked();
-
 
     void on_editUser_selectionChanged();
 

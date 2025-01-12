@@ -1,10 +1,7 @@
 #ifndef LIAOTIANWINDOW_H
 #define LIAOTIANWINDOW_H
 
-#include <QMouseEvent>
-#include <QMainWindow>
-#include <QDebug>
-
+#include "httpmgr.h"
 namespace Ui {
 class LiaotianWindow;
 }
