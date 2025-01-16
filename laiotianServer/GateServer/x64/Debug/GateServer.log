@@ -1,0 +1,8 @@
+﻿  GateServer.cpp
+D:\githubClone\laiotian_Demo\laiotianServer\GateServer\GateServer.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+D:\githubClone\laiotian_Demo\laiotianServer\GateServer\GateServer.cpp(62,16): warning C4244: “初始化”: 从“PORT_LONGLONG”转换到“int”，可能丢失数据
+  GateServer.vcxproj -> D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\GateServer.exe

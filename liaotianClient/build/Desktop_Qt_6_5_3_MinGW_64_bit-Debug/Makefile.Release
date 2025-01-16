@@ -72,7 +72,7 @@ OBJECTS       = release/global.o \
 		release/moc_mainwindow.o \
 		release/moc_zhucemainwindow.o
 
-DIST          =  ..\..\global.h \
+DIST          = config.ini ..\..\global.h \
 		..\..\httpmgr.h \
 		..\..\liaotianwindow.h \
 		..\..\mainwindow.h \
@@ -95,6 +95,7 @@ all: Makefile.Release  release/liaotian.exe
 
 release/liaotian.exe: D:/lerning_application/QT6/6.5.3/mingw_64/lib/libQt6Widgets.a D:/lerning_application/QT6/6.5.3/mingw_64/lib/libQt6Gui.a D:/lerning_application/QT6/6.5.3/mingw_64/lib/libQt6Network.a D:/lerning_application/QT6/6.5.3/mingw_64/lib/libQt6Core.a D:/lerning_application/QT6/6.5.3/mingw_64/lib/libQt6EntryPoint.a ui_liaotianwindow.h ui_mainwindow.h ui_zhucemainwindow.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) @release\object_script.liaotian.Release $(LIBS)
+	copy /Y "D:\githubClone\laiotian_Demo\liaotianClient\config.ini" "D:\githubClone\laiotian_Demo\liaotianClient\build\Desktop_Qt_6_5_3_MinGW_64_bit-Debug\"
 
 qmake: FORCE
 	@$(QMAKE) -o Makefile.Release ..\..\liaotian.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -312,16 +313,21 @@ release/moc_httpmgr.cpp: ../../httpmgr.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qstyle.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QRegularExpression \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QString \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QUrl \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QByteArray \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkReply \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkreply.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QIODevice \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QString \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkRequest \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkrequest.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSharedDataPointer \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QUrl \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslConfiguration \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslconfiguration.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslsocket.h \
@@ -347,11 +353,19 @@ release/moc_httpmgr.cpp: ../../httpmgr.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/quuid.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonDocument \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsondocument.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QDir \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdir.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfile.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfiledevice.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSettings \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qsettings.h \
 		release/moc_predefs.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/bin/moc.exe
 	D:\lerning_application\QT6\6.5.3\mingw_64\bin\moc.exe $(DEFINES) --include D:/githubClone/laiotian_Demo/liaotianClient/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/release/moc_predefs.h -ID:/lerning_application/QT6/6.5.3/mingw_64/mkspecs/win32-g++ -ID:/githubClone/laiotian_Demo/liaotianClient -ID:/lerning_application/QT6/6.5.3/mingw_64/include -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore -I. -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/lerning_application/QT6/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\httpmgr.h -o release\moc_httpmgr.cpp
 
 release/moc_liaotianwindow.cpp: ../../liaotianwindow.h \
+		../../httpmgr.h \
 		../../singleton.h \
 		../../global.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/QMouseEvent \
@@ -520,6 +534,53 @@ release/moc_liaotianwindow.cpp: ../../liaotianwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qstyle.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QRegularExpression \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QByteArray \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkReply \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkreply.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QIODevice \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QString \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkRequest \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkrequest.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSharedDataPointer \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QUrl \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslConfiguration \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslconfiguration.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtcpsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qabstractsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qhostaddress.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslerror.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslcertificate.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcryptographichash.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdatetime.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcalendar.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qssl.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QFlags \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QMetaType \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonObject \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborcommon.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/quuid.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonDocument \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsondocument.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QDir \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdir.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfile.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfiledevice.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSettings \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qsettings.h \
 		release/moc_predefs.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/bin/moc.exe
 	D:\lerning_application\QT6\6.5.3\mingw_64\bin\moc.exe $(DEFINES) --include D:/githubClone/laiotian_Demo/liaotianClient/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/release/moc_predefs.h -ID:/lerning_application/QT6/6.5.3/mingw_64/mkspecs/win32-g++ -ID:/githubClone/laiotian_Demo/liaotianClient -ID:/lerning_application/QT6/6.5.3/mingw_64/include -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore -I. -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/lerning_application/QT6/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\liaotianwindow.h -o release\moc_liaotianwindow.cpp
@@ -527,6 +588,7 @@ release/moc_liaotianwindow.cpp: ../../liaotianwindow.h \
 release/moc_mainwindow.cpp: ../../mainwindow.h \
 		../../zhucemainwindow.h \
 		../../liaotianwindow.h \
+		../../httpmgr.h \
 		../../singleton.h \
 		../../global.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/QMouseEvent \
@@ -695,12 +757,60 @@ release/moc_mainwindow.cpp: ../../mainwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qstyle.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QRegularExpression \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QByteArray \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkReply \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkreply.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QIODevice \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QString \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkRequest \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkrequest.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSharedDataPointer \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QUrl \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslConfiguration \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslconfiguration.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtcpsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qabstractsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qhostaddress.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslerror.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslcertificate.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcryptographichash.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdatetime.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcalendar.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qssl.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QFlags \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QMetaType \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonObject \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborcommon.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/quuid.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonDocument \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsondocument.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QDir \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdir.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfile.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfiledevice.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSettings \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qsettings.h \
 		release/moc_predefs.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/bin/moc.exe
 	D:\lerning_application\QT6\6.5.3\mingw_64\bin\moc.exe $(DEFINES) --include D:/githubClone/laiotian_Demo/liaotianClient/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/release/moc_predefs.h -ID:/lerning_application/QT6/6.5.3/mingw_64/mkspecs/win32-g++ -ID:/githubClone/laiotian_Demo/liaotianClient -ID:/lerning_application/QT6/6.5.3/mingw_64/include -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore -I. -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/lerning_application/QT6/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\mainwindow.h -o release\moc_mainwindow.cpp
 
 release/moc_zhucemainwindow.cpp: ../../zhucemainwindow.h \
 		../../liaotianwindow.h \
+		../../httpmgr.h \
 		../../singleton.h \
 		../../global.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/QMouseEvent \
@@ -869,6 +979,53 @@ release/moc_zhucemainwindow.cpp: ../../zhucemainwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qstyle.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QRegularExpression \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QByteArray \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkReply \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkreply.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QIODevice \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QString \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkRequest \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkrequest.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSharedDataPointer \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QUrl \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslConfiguration \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslconfiguration.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtcpsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qabstractsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qhostaddress.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslerror.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslcertificate.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcryptographichash.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdatetime.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcalendar.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qssl.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QFlags \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QMetaType \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonObject \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborcommon.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/quuid.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonDocument \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsondocument.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QDir \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdir.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfile.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfiledevice.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSettings \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qsettings.h \
 		release/moc_predefs.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/bin/moc.exe
 	D:\lerning_application\QT6\6.5.3\mingw_64\bin\moc.exe $(DEFINES) --include D:/githubClone/laiotian_Demo/liaotianClient/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/release/moc_predefs.h -ID:/lerning_application/QT6/6.5.3/mingw_64/mkspecs/win32-g++ -ID:/githubClone/laiotian_Demo/liaotianClient -ID:/lerning_application/QT6/6.5.3/mingw_64/include -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork -ID:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore -I. -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/lerning_application/QT6/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/lerning_application/QT6/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\zhucemainwindow.h -o release\moc_zhucemainwindow.cpp
@@ -1070,7 +1227,54 @@ release/global.o: ../../global.cpp ../../global.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/QStyle \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qstyle.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QRegularExpression \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qregularexpression.h
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QByteArray \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkReply \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkreply.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QIODevice \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QString \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkRequest \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkrequest.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSharedDataPointer \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QUrl \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslConfiguration \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslconfiguration.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtcpsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qabstractsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qhostaddress.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslerror.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslcertificate.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcryptographichash.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdatetime.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcalendar.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qssl.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QFlags \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QMetaType \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonObject \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborcommon.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/quuid.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonDocument \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsondocument.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QDir \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdir.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfile.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfiledevice.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSettings \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qsettings.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\global.o ..\..\global.cpp
 
 release/httpmgr.o: ../../httpmgr.cpp ../../httpmgr.h \
@@ -1242,16 +1446,21 @@ release/httpmgr.o: ../../httpmgr.cpp ../../httpmgr.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qstyle.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QRegularExpression \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QString \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QUrl \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QByteArray \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkReply \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkreply.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QIODevice \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QString \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkRequest \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkrequest.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSharedDataPointer \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QUrl \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslConfiguration \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslconfiguration.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslsocket.h \
@@ -1276,10 +1485,18 @@ release/httpmgr.o: ../../httpmgr.cpp ../../httpmgr.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborcommon.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/quuid.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonDocument \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsondocument.h
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsondocument.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QDir \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdir.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfile.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfiledevice.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSettings \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qsettings.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\httpmgr.o ..\..\httpmgr.cpp
 
 release/liaotianwindow.o: ../../liaotianwindow.cpp ../../liaotianwindow.h \
+		../../httpmgr.h \
 		../../singleton.h \
 		../../global.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/QMouseEvent \
@@ -1448,8 +1665,54 @@ release/liaotianwindow.o: ../../liaotianwindow.cpp ../../liaotianwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qstyle.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QRegularExpression \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
-		ui_liaotianwindow.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QByteArray \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkReply \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkreply.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QIODevice \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QString \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkRequest \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkrequest.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSharedDataPointer \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QUrl \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslConfiguration \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslconfiguration.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtcpsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qabstractsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qhostaddress.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslerror.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslcertificate.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcryptographichash.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdatetime.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcalendar.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qssl.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QFlags \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QMetaType \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonObject \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborcommon.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/quuid.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonDocument \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsondocument.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QDir \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdir.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfile.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfiledevice.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSettings \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qsettings.h \
+		ui_liaotianwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/QIcon \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/QApplication \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qapplication.h \
@@ -1471,7 +1734,6 @@ release/liaotianwindow.o: ../../liaotianwindow.cpp ../../liaotianwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qpromise.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qguiapplication.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qinputmethod.h \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qguiapplication_platform.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/QGridLayout \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
@@ -1497,6 +1759,7 @@ release/liaotianwindow.o: ../../liaotianwindow.cpp ../../liaotianwindow.h \
 release/main.o: ../../main.cpp ../../mainwindow.h \
 		../../zhucemainwindow.h \
 		../../liaotianwindow.h \
+		../../httpmgr.h \
 		../../singleton.h \
 		../../global.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/QMouseEvent \
@@ -1665,6 +1928,53 @@ release/main.o: ../../main.cpp ../../mainwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qstyle.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QRegularExpression \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QByteArray \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkReply \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkreply.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QIODevice \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QString \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkRequest \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkrequest.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSharedDataPointer \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QUrl \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslConfiguration \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslconfiguration.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtcpsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qabstractsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qhostaddress.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslerror.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslcertificate.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcryptographichash.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdatetime.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcalendar.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qssl.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QFlags \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QMetaType \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonObject \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborcommon.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/quuid.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonDocument \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsondocument.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QDir \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdir.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfile.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfiledevice.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSettings \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qsettings.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/QApplication \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qapplication.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcoreapplication.h \
@@ -1685,13 +1995,13 @@ release/main.o: ../../main.cpp ../../mainwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qpromise.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qguiapplication.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qinputmethod.h \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qguiapplication_platform.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\..\main.cpp
 
 release/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../zhucemainwindow.h \
 		../../liaotianwindow.h \
+		../../httpmgr.h \
 		../../singleton.h \
 		../../global.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/QMouseEvent \
@@ -1860,8 +2170,54 @@ release/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qstyle.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QRegularExpression \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
-		ui_mainwindow.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QByteArray \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkReply \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkreply.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QIODevice \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QString \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkRequest \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkrequest.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSharedDataPointer \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QUrl \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslConfiguration \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslconfiguration.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtcpsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qabstractsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qhostaddress.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslerror.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslcertificate.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcryptographichash.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdatetime.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcalendar.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qssl.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QFlags \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QMetaType \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonObject \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborcommon.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/quuid.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonDocument \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsondocument.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QDir \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdir.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfile.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfiledevice.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSettings \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qsettings.h \
+		ui_mainwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/QIcon \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/QApplication \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qapplication.h \
@@ -1883,7 +2239,6 @@ release/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qpromise.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qguiapplication.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qinputmethod.h \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qguiapplication_platform.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/QGridLayout \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
@@ -1913,6 +2268,7 @@ release/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 
 release/zhucemainwindow.o: ../../zhucemainwindow.cpp ../../zhucemainwindow.h \
 		../../liaotianwindow.h \
+		../../httpmgr.h \
 		../../singleton.h \
 		../../global.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/QMouseEvent \
@@ -2081,8 +2437,54 @@ release/zhucemainwindow.o: ../../zhucemainwindow.cpp ../../zhucemainwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qstyle.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QRegularExpression \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
-		ui_zhucemainwindow.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QByteArray \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkReply \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkreply.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QIODevice \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QString \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QVariant \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkRequest \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkrequest.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSharedDataPointer \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QUrl \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslConfiguration \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslconfiguration.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qtcpsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qabstractsocket.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qhostaddress.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslerror.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslcertificate.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcryptographichash.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdatetime.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcalendar.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qssl.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QFlags \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QMetaType \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonObject \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborvalue.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcborcommon.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/quuid.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QJsonDocument \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qjsondocument.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QDir \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qdir.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfile.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfiledevice.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/QSettings \
+		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qsettings.h \
+		ui_zhucemainwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/QApplication \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qapplication.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qcoreapplication.h \
@@ -2103,7 +2505,6 @@ release/zhucemainwindow.o: ../../zhucemainwindow.cpp ../../zhucemainwindow.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qpromise.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qguiapplication.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qinputmethod.h \
-		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtCore/qlocale.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtGui/qguiapplication_platform.h \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/QGridLayout \
 		D:/lerning_application/QT6/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \

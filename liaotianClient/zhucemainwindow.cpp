@@ -139,10 +139,15 @@ void zhuceMainWindow::on_editCode_selectionChanged()
 
 void zhuceMainWindow::on_btnGetCode_clicked()
 {
-    auto text=ui->editEmail->text();
+    auto email=ui->editEmail->text();
     QRegularExpression regex(R"((\w+)(.|_)?(\w+)@(\w+)(\.(\w+))+)");
-    bool match=regex.match(text).hasMatch();
+    bool match=regex.match(email).hasMatch();
     if(match){
+        //http验证码
+        QJsonObject json_obj;
+        json_obj["email"]=email;
+        HttpMgr::GetInstance()->PostHttpReq(QUrl(gate_url_prefix+"/get_varifycode"),
+                                            json_obj, ReqId::ID_GET_VARIFY_CODE,Modules::REGISTERMOD);
 
     }
     else{

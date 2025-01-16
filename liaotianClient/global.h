@@ -18,7 +18,8 @@
 #include <QNetworkAccessManager>
 #include <QJsonObject>
 #include <QJsonDocument>
-
+#include <QDir>
+#include <QSettings>
 enum ReqId{
     ID_GET_VARIFY_CODE=1001,//获取验证码
     ID_REG_USER=1002,//注册账户
@@ -40,5 +41,8 @@ enum ErrorCodes{
 
 //刷新qss
 extern std::function<void(QWidget*)> repolish;
+
+
+extern QString gate_url_prefix;
 
 #endif // GLOBAL_H
