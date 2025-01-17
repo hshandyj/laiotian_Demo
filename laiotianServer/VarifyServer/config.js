@@ -7,7 +7,7 @@ let mysql_host = config.mysql.host;
 let mysql_port = config.mysql.port;
 let redis_host = config.redis.host;
 let redis_port = config.redis.port;
-let redis_passwd = config.redis.passwd;
+let redis_passwd = config.redis.password;
 let code_prefix = "code_";
 
 

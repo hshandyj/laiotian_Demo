@@ -40,12 +40,23 @@ void zhuceMainWindow::initHttpHandlers()
     _handlers.insert(ReqId::ID_GET_VARIFY_CODE,[this](const QJsonObject& jsonObj){
         int error=jsonObj["error"].toInt();
         if(error!=ErrorCodes::SUCCESS){
-            showTip(tr("参数错误"),false);
+            showTip(tr("获取验证码失败"),false);
             return ;
         }
         auto email=jsonObj["email"].toString();
         showTip(tr("验证码已经发送到邮箱，请注意查收"),true);
         qDebug()<<"email is"<<email;
+    });
+
+    _handlers.insert(ReqId::ID_REG_USER, [this](QJsonObject jsonObj){
+        int error = jsonObj["error"].toInt();
+        if(error != ErrorCodes::SUCCESS){
+            showTip(tr("注册失败"),false);
+            return;
+        }
+        auto email = jsonObj["email"].toString();
+        showTip(tr("用户注册成功"), true);
+        qDebug()<< "email is " << email ;
     });
 }
 
@@ -90,8 +101,48 @@ void zhuceMainWindow::on_btnExit_clicked()
 
 void zhuceMainWindow::on_btnSignup_clicked()
 {
-    this->hide();
-    this->liaotianPage->show();
+    if(ui->editUsername->text() == ""){
+        showTip(tr("用户名不能为空"), false);
+        return;
+    }
+
+    if(ui->editEmail->text() == ""){
+        showTip(tr("邮箱不能为空"), false);
+        return;
+    }
+
+    if(ui->editPassword->text() == ""){
+        showTip(tr("密码不能为空"), false);
+        return;
+    }
+
+    if(ui->editPasswordYes->text() == ""){
+        showTip(tr("确认密码不能为空"), false);
+        return;
+    }
+
+    if(ui->editPassword->text() != ui->editPasswordYes->text()){
+        showTip(tr("密码和确认密码不匹配"), false);
+        return;
+    }
+
+    if(ui->editCode->text() == ""){
+        showTip(tr("验证码不能为空"), false);
+        return;
+    }
+
+    //day11 发送http请求注册用户
+    QJsonObject json_obj;
+    json_obj["user"] = ui->editUsername->text();
+    json_obj["email"] = ui->editEmail->text();
+    json_obj["passwd"] = ui->editPassword->text();
+    json_obj["confirm"] = ui->editPasswordYes->text();
+    json_obj["varifycode"] = ui->editCode->text();
+    HttpMgr::GetInstance()->PostHttpReq(QUrl(gate_url_prefix+"/user_register"),
+                                        json_obj, ReqId::ID_REG_USER,Modules::REGISTERMOD);
+
+    // this->hide();
+    // this->liaotianPage->show();
 }
 
 
