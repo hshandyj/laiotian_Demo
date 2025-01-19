@@ -1,71 +1,19 @@
-﻿  AsioIOServicePool.cpp
-D:\githubClone\laiotian_Demo\laiotianServer\GateServer\AsioIOServicePool.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
-  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
-  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
-  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-  ConfigMgr.cpp
-D:\githubClone\laiotian_Demo\laiotianServer\GateServer\ConfigMgr.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+﻿  MySqlPool.cpp
+D:\githubClone\laiotian_Demo\laiotianServer\GateServer\MySqlPool.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 D:\githubClone\laiotian_Demo\laiotianServer\GateServer\const.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
   Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-  CServer.cpp
-D:\githubClone\laiotian_Demo\laiotianServer\GateServer\CServer.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\githubClone\laiotian_Demo\laiotianServer\GateServer\const.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
-  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
-  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
-  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-D:\githubClone\laiotian_Demo\laiotianServer\GateServer\AsioIOServicePool.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  GateServer.cpp
-D:\githubClone\laiotian_Demo\laiotianServer\GateServer\const.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
-  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
-  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
-  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-  HttpConnection.cpp
-D:\githubClone\laiotian_Demo\laiotianServer\GateServer\HttpConnection.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\githubClone\laiotian_Demo\laiotianServer\GateServer\const.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
-  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
-  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
-  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-  LogicSystem.cpp
-D:\githubClone\laiotian_Demo\laiotianServer\GateServer\const.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
-  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
-  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
-  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-  message.grpc.pb.cc
-  message.pb.cc
-D:\githubClone\laiotian_Demo\laiotianServer\GateServer\message.pb.cc(408,67): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+D:\githubClone\laiotian_Demo\laiotianServer\GateServer\MySqlPool.cpp(34,29): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   RedisMgr.cpp
+D:\githubClone\laiotian_Demo\laiotianServer\GateServer\RedisMgr.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 D:\githubClone\laiotian_Demo\laiotianServer\GateServer\const.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
   Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-  VerifyGrpcClient.cpp
-D:\githubClone\laiotian_Demo\laiotianServer\GateServer\const.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   正在生成代码...
-json_vc71_libmtd.lib(json_reader.obj) : warning LNK4099: 未找到 PDB“lib_json.pdb”(使用“json_vc71_libmtd.lib(json_reader.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\lib_json.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-json_vc71_libmtd.lib(json_value.obj) : warning LNK4099: 未找到 PDB“lib_json.pdb”(使用“json_vc71_libmtd.lib(json_value.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\lib_json.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-json_vc71_libmtd.lib(json_writer.obj) : warning LNK4099: 未找到 PDB“lib_json.pdb”(使用“json_vc71_libmtd.lib(json_writer.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\lib_json.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-Win32_Interop.lib(Win32_ANSI.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_ANSI.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-Win32_Interop.lib(Win32_Common.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_Common.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-Win32_Interop.lib(Win32_Error.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_Error.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-Win32_Interop.lib(Win32_EventLog.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_EventLog.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-Win32_Interop.lib(Win32_FDAPI.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_FDAPI.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-Win32_Interop.lib(Win32_fdapi_crt.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_fdapi_crt.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-Win32_Interop.lib(Win32_RedisLog.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_RedisLog.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-Win32_Interop.lib(win32_rfdmap.obj) : warning LNK4099: 未找到 PDB“”(使用“Win32_Interop.lib(win32_rfdmap.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
-Win32_Interop.lib(Win32_Time.obj) : warning LNK4099: 未找到 PDB“”(使用“Win32_Interop.lib(Win32_Time.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
-Win32_Interop.lib(Win32_variadicFunctor.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_variadicFunctor.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-hiredis.lib(hiredis.obj) : warning LNK4099: 未找到 PDB“hiredis.pdb”(使用“hiredis.lib(hiredis.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\hiredis.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-hiredis.lib(net.obj) : warning LNK4099: 未找到 PDB“hiredis.pdb”(使用“hiredis.lib(net.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\hiredis.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-hiredis.lib(sds.obj) : warning LNK4099: 未找到 PDB“hiredis.pdb”(使用“hiredis.lib(sds.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\hiredis.pdb”中寻找)；正在链接对象，如同没有调试信息一样
   GateServer.vcxproj -> D:\githubClone\laiotian_Demo\laiotianServer\GateServer\x64\Debug\GateServer.exe
   D:\githubClone\laiotian_Demo\laiotianServer\GateServer\config.ini
   复制了 1 个文件

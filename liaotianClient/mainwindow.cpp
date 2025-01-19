@@ -10,12 +10,14 @@ MainWindow::MainWindow(QWidget *parent)
     setWindowFlag(Qt::FramelessWindowHint);//设置窗口无边框
     setFixedSize(width(),height());//设置固定大小
     setAttribute(Qt::WA_TranslucentBackground);// 设置窗口支持透明背景
-    liaotianPage=new LiaotianWindow();
-    zhucePage=new zhuceMainWindow();
+    liaotianPage=new LiaotianWindow(this);
+    zhucePage=new zhuceMainWindow(this);
+    connect(zhucePage,&zhuceMainWindow::sigSwitchLogin,this,&MainWindow::slotSwitchLogin);
 }
 
 MainWindow::~MainWindow()
 {
+    //qDebug()<<"MainWindow";
     delete ui;
 }
 
@@ -72,5 +74,11 @@ void MainWindow::on_editPassword_selectionChanged()
         ui->editPassword->setEchoMode(QLineEdit::Password);
     }
 
+}
+
+void MainWindow::slotSwitchLogin()
+{
+    this->zhucePage->hide();
+    this->show();
 }
 

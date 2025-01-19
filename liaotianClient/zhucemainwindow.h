@@ -2,7 +2,7 @@
 #define ZHUCEMAINWINDOW_H
 
 #include "liaotianwindow.h"
-
+#include "clickedlabel.h"
 namespace Ui {
 class zhuceMainWindow;
 }
@@ -51,6 +51,19 @@ private:
     QPoint mOffset;
     //存储聊天窗口的指针
     LiaotianWindow* liaotianPage;
+
+    QMap<TipErr, QString> _tip_errs;
+
+    void AddTipErr(TipErr te, QString tips);
+    void DelTipErr(TipErr te);
+    bool checkUserValid();
+    bool checkPassValid();
+    bool checkEmailValid();
+    bool checkVarifyValid();
+    bool checkConfirmValid();
+
+signals:
+    void sigSwitchLogin();
 };
 
 #endif // ZHUCEMAINWINDOW_H

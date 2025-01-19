@@ -13,6 +13,7 @@ LiaotianWindow::LiaotianWindow(QWidget *parent)
 
 LiaotianWindow::~LiaotianWindow()
 {
+    //qDebug()<<"LiaotianWindow";
     delete ui;
 }
 

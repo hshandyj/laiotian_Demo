@@ -34,6 +34,7 @@ private slots:
 
     void on_editPassword_selectionChanged();
 
+    void slotSwitchLogin();
 private:
     Ui::MainWindow *ui;
     //拖动窗口

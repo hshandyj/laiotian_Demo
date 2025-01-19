@@ -9,19 +9,23 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    clickedlabel.cpp \
     global.cpp \
     httpmgr.cpp \
     liaotianwindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    timerbtn.cpp \
     zhucemainwindow.cpp
 
 HEADERS += \
+    clickedlabel.h \
     global.h \
     httpmgr.h \
     liaotianwindow.h \
     mainwindow.h \
     singleton.h \
+    timerbtn.h \
     zhucemainwindow.h
 
 FORMS += \

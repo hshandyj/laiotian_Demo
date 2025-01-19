@@ -48,6 +48,9 @@
     <ClCompile Include="MySqlPool.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MysqlMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CServer.h">
@@ -84,6 +87,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="MySqlPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MysqlMgr.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

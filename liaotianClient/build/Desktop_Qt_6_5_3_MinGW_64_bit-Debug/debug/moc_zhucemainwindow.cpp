@@ -8,6 +8,7 @@
 
 #include "../../../zhucemainwindow.h"
 #include <QtNetwork/QSslError>
+#include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 
 #if __has_include(<QtCore/qtmochelpers.h>)
@@ -40,8 +41,9 @@ namespace {
 struct qt_meta_stringdata_CLASSzhuceMainWindowENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSzhuceMainWindowENDCLASS = QtMocHelpers::stringData(
     "zhuceMainWindow",
-    "slot_reg_mod_finish",
+    "sigSwitchLogin",
     "",
+    "slot_reg_mod_finish",
     "ReqId",
     "id",
     "res",
@@ -58,48 +60,51 @@ static constexpr auto qt_meta_stringdata_CLASSzhuceMainWindowENDCLASS = QtMocHel
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSzhuceMainWindowENDCLASS_t {
-    uint offsetsAndSizes[32];
+    uint offsetsAndSizes[34];
     char stringdata0[16];
-    char stringdata1[20];
+    char stringdata1[15];
     char stringdata2[1];
-    char stringdata3[6];
-    char stringdata4[3];
-    char stringdata5[4];
-    char stringdata6[11];
-    char stringdata7[4];
-    char stringdata8[19];
-    char stringdata9[21];
-    char stringdata10[33];
-    char stringdata11[30];
-    char stringdata12[33];
-    char stringdata13[36];
-    char stringdata14[29];
-    char stringdata15[22];
+    char stringdata3[20];
+    char stringdata4[6];
+    char stringdata5[3];
+    char stringdata6[4];
+    char stringdata7[11];
+    char stringdata8[4];
+    char stringdata9[19];
+    char stringdata10[21];
+    char stringdata11[33];
+    char stringdata12[30];
+    char stringdata13[33];
+    char stringdata14[36];
+    char stringdata15[29];
+    char stringdata16[22];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSzhuceMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_CLASSzhuceMainWindowENDCLASS_t qt_meta_stringdata_CLASSzhuceMainWindowENDCLASS = {
     {
         QT_MOC_LITERAL(0, 15),  // "zhuceMainWindow"
-        QT_MOC_LITERAL(16, 19),  // "slot_reg_mod_finish"
-        QT_MOC_LITERAL(36, 0),  // ""
-        QT_MOC_LITERAL(37, 5),  // "ReqId"
-        QT_MOC_LITERAL(43, 2),  // "id"
-        QT_MOC_LITERAL(46, 3),  // "res"
-        QT_MOC_LITERAL(50, 10),  // "ErrorCodes"
-        QT_MOC_LITERAL(61, 3),  // "err"
-        QT_MOC_LITERAL(65, 18),  // "on_btnExit_clicked"
-        QT_MOC_LITERAL(84, 20),  // "on_btnSignup_clicked"
-        QT_MOC_LITERAL(105, 32),  // "on_editUsername_selectionChanged"
-        QT_MOC_LITERAL(138, 29),  // "on_editEmail_selectionChanged"
-        QT_MOC_LITERAL(168, 32),  // "on_editPassword_selectionChanged"
-        QT_MOC_LITERAL(201, 35),  // "on_editPasswordYes_selectionC..."
-        QT_MOC_LITERAL(237, 28),  // "on_editCode_selectionChanged"
-        QT_MOC_LITERAL(266, 21)   // "on_btnGetCode_clicked"
+        QT_MOC_LITERAL(16, 14),  // "sigSwitchLogin"
+        QT_MOC_LITERAL(31, 0),  // ""
+        QT_MOC_LITERAL(32, 19),  // "slot_reg_mod_finish"
+        QT_MOC_LITERAL(52, 5),  // "ReqId"
+        QT_MOC_LITERAL(58, 2),  // "id"
+        QT_MOC_LITERAL(61, 3),  // "res"
+        QT_MOC_LITERAL(65, 10),  // "ErrorCodes"
+        QT_MOC_LITERAL(76, 3),  // "err"
+        QT_MOC_LITERAL(80, 18),  // "on_btnExit_clicked"
+        QT_MOC_LITERAL(99, 20),  // "on_btnSignup_clicked"
+        QT_MOC_LITERAL(120, 32),  // "on_editUsername_selectionChanged"
+        QT_MOC_LITERAL(153, 29),  // "on_editEmail_selectionChanged"
+        QT_MOC_LITERAL(183, 32),  // "on_editPassword_selectionChanged"
+        QT_MOC_LITERAL(216, 35),  // "on_editPasswordYes_selectionC..."
+        QT_MOC_LITERAL(252, 28),  // "on_editCode_selectionChanged"
+        QT_MOC_LITERAL(281, 21)   // "on_btnGetCode_clicked"
     },
     "zhuceMainWindow",
-    "slot_reg_mod_finish",
+    "sigSwitchLogin",
     "",
+    "slot_reg_mod_finish",
     "ReqId",
     "id",
     "res",
@@ -124,26 +129,32 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSzhuceMainWindowENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       1,       // signalCount
+
+ // signals: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    0,   74,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    3,   68,    2, 0x08,    1 /* Private */,
-       8,    0,   75,    2, 0x08,    5 /* Private */,
-       9,    0,   76,    2, 0x08,    6 /* Private */,
-      10,    0,   77,    2, 0x08,    7 /* Private */,
-      11,    0,   78,    2, 0x08,    8 /* Private */,
-      12,    0,   79,    2, 0x08,    9 /* Private */,
-      13,    0,   80,    2, 0x08,   10 /* Private */,
-      14,    0,   81,    2, 0x08,   11 /* Private */,
-      15,    0,   82,    2, 0x08,   12 /* Private */,
+       3,    3,   75,    2, 0x08,    2 /* Private */,
+       9,    0,   82,    2, 0x08,    6 /* Private */,
+      10,    0,   83,    2, 0x08,    7 /* Private */,
+      11,    0,   84,    2, 0x08,    8 /* Private */,
+      12,    0,   85,    2, 0x08,    9 /* Private */,
+      13,    0,   86,    2, 0x08,   10 /* Private */,
+      14,    0,   87,    2, 0x08,   11 /* Private */,
+      15,    0,   88,    2, 0x08,   12 /* Private */,
+      16,    0,   89,    2, 0x08,   13 /* Private */,
+
+ // signals: parameters
+    QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void, 0x80000000 | 3, QMetaType::QString, 0x80000000 | 6,    4,    5,    7,
+    QMetaType::Void, 0x80000000 | 4, QMetaType::QString, 0x80000000 | 7,    5,    6,    8,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -165,6 +176,8 @@ Q_CONSTINIT const QMetaObject zhuceMainWindow::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSzhuceMainWindowENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<zhuceMainWindow, std::true_type>,
+        // method 'sigSwitchLogin'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'slot_reg_mod_finish'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<ReqId, std::false_type>,
@@ -196,16 +209,26 @@ void zhuceMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         auto *_t = static_cast<zhuceMainWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->slot_reg_mod_finish((*reinterpret_cast< std::add_pointer_t<ReqId>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<ErrorCodes>>(_a[3]))); break;
-        case 1: _t->on_btnExit_clicked(); break;
-        case 2: _t->on_btnSignup_clicked(); break;
-        case 3: _t->on_editUsername_selectionChanged(); break;
-        case 4: _t->on_editEmail_selectionChanged(); break;
-        case 5: _t->on_editPassword_selectionChanged(); break;
-        case 6: _t->on_editPasswordYes_selectionChanged(); break;
-        case 7: _t->on_editCode_selectionChanged(); break;
-        case 8: _t->on_btnGetCode_clicked(); break;
+        case 0: _t->sigSwitchLogin(); break;
+        case 1: _t->slot_reg_mod_finish((*reinterpret_cast< std::add_pointer_t<ReqId>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<ErrorCodes>>(_a[3]))); break;
+        case 2: _t->on_btnExit_clicked(); break;
+        case 3: _t->on_btnSignup_clicked(); break;
+        case 4: _t->on_editUsername_selectionChanged(); break;
+        case 5: _t->on_editEmail_selectionChanged(); break;
+        case 6: _t->on_editPassword_selectionChanged(); break;
+        case 7: _t->on_editPasswordYes_selectionChanged(); break;
+        case 8: _t->on_editCode_selectionChanged(); break;
+        case 9: _t->on_btnGetCode_clicked(); break;
         default: ;
+        }
+    } else if (_c == QMetaObject::IndexOfMethod) {
+        int *result = reinterpret_cast<int *>(_a[0]);
+        {
+            using _t = void (zhuceMainWindow::*)();
+            if (_t _q_method = &zhuceMainWindow::sigSwitchLogin; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 0;
+                return;
+            }
         }
     }
 }
@@ -229,14 +252,20 @@ int zhuceMainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 10;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
+        if (_id < 10)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 9;
+        _id -= 10;
     }
     return _id;
+}
+
+// SIGNAL 0
+void zhuceMainWindow::sigSwitchLogin()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 QT_WARNING_POP
