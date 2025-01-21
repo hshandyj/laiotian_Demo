@@ -1,7 +1,7 @@
 #ifndef ZHUCEMAINWINDOW_H
 #define ZHUCEMAINWINDOW_H
 
-#include "liaotianwindow.h"
+#include "httpmgr.h"
 #include "clickedlabel.h"
 namespace Ui {
 class zhuceMainWindow;
@@ -49,8 +49,6 @@ private:
     Ui::zhuceMainWindow *ui;
     //拖动窗口
     QPoint mOffset;
-    //存储聊天窗口的指针
-    LiaotianWindow* liaotianPage;
 
     QMap<TipErr, QString> _tip_errs;
 

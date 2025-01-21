@@ -23,12 +23,14 @@
 enum ReqId{
     ID_GET_VARIFY_CODE=1001,//获取验证码
     ID_REG_USER=1002,//注册账户
-
+    ID_RESET_USER=1003,
+    ID_LOGIN_USER=1004,
 };
 
 enum Modules{
     REGISTERMOD=0,
-
+    RESETMOD=1,
+    LOGINMOD=2,
 };
 
 enum ErrorCodes{
@@ -50,6 +52,13 @@ enum TipErr{
 enum ClickLbState{
     Normal = 0,
     Selected = 1
+};
+
+struct ServerInfo{
+    QString Host;
+    QString Port;
+    QString Token;
+    int Uid;
 };
 
 //刷新qss

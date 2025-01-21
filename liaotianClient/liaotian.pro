@@ -15,6 +15,7 @@ SOURCES += \
     liaotianwindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    resetwindow.cpp \
     timerbtn.cpp \
     zhucemainwindow.cpp
 
@@ -24,6 +25,7 @@ HEADERS += \
     httpmgr.h \
     liaotianwindow.h \
     mainwindow.h \
+    resetwindow.h \
     singleton.h \
     timerbtn.h \
     zhucemainwindow.h
@@ -31,6 +33,7 @@ HEADERS += \
 FORMS += \
     liaotianwindow.ui \
     mainwindow.ui \
+    resetwindow.ui \
     zhucemainwindow.ui
 
 # Default rules for deployment.

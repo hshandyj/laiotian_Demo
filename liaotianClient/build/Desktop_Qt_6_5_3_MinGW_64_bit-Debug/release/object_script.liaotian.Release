@@ -4,6 +4,7 @@ release/httpmgr.o
 release/liaotianwindow.o
 release/main.o
 release/mainwindow.o
+release/resetwindow.o
 release/timerbtn.o
 release/zhucemainwindow.o
 release/qrc_resourse.o
@@ -11,4 +12,5 @@ release/moc_clickedlabel.o
 release/moc_httpmgr.o
 release/moc_liaotianwindow.o
 release/moc_mainwindow.o
+release/moc_resetwindow.o
 release/moc_zhucemainwindow.o

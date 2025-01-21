@@ -1,3 +1,8 @@
 *.ipch
 *.db
 /laiotianServer/GateServer/.vs
+/laiotianServer/GateServer/.vs/Debug
+/laiotianServer/GateServer/.vs/x64
+/laiotianServer/StatusServer/.vs
+/laiotianServer/StatusServer/.vs/Debug
+/laiotianServer/StatusServer/.vs/x64

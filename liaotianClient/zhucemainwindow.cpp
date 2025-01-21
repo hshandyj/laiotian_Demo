@@ -4,7 +4,6 @@ zhuceMainWindow::zhuceMainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::zhuceMainWindow)
 {
-    liaotianPage=new LiaotianWindow();
     ui->setupUi(this);
     setWindowFlag(Qt::FramelessWindowHint);//设置窗口无边框
     setFixedSize(width(),height());//设置固定大小
@@ -49,7 +48,7 @@ zhuceMainWindow::zhuceMainWindow(QWidget *parent)
         }else{
             ui->editPassword->setEchoMode(QLineEdit::Normal);
         }
-        qDebug() << "Label was clicked!";
+        //qDebug() << "Label was clicked!";
     });
 
     connect(ui->confirm_visible, &ClickedLabel::clicked, this, [this]() {
@@ -59,7 +58,7 @@ zhuceMainWindow::zhuceMainWindow(QWidget *parent)
         }else{
             ui->editPasswordYes->setEchoMode(QLineEdit::Normal);
         }
-        qDebug() << "Label was clicked!";
+        //qDebug() << "Label was clicked!";
     });
 
 }
@@ -191,9 +190,9 @@ void zhuceMainWindow::initHttpHandlers()
             showTip(tr("获取验证码失败"),false);
             return ;
         }
-        auto email=jsonObj["email"].toString();
+        //auto email=jsonObj["email"].toString();
         showTip(tr("验证码已经发送到邮箱，请注意查收"),true);
-        qDebug()<<"email is"<<email;
+        //qDebug()<<"email is"<<email;
     });
 
     _handlers.insert(ReqId::ID_REG_USER, [this](QJsonObject jsonObj){
@@ -202,12 +201,8 @@ void zhuceMainWindow::initHttpHandlers()
             showTip(tr("注册失败"),false);
             return;
         }
-        auto email = jsonObj["email"].toString();
-        this->hide();
-        this->liaotianPage->show();
         showTip(tr("用户注册成功"), true);
         qDebug()<< "user uuid is " << jsonObj["uudi"].toString() ;
-        qDebug()<< "email is " << email ;
     });
 }
 

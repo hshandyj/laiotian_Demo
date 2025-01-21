@@ -1,0 +1,21 @@
+﻿  StatusServiceImpl.cpp
+D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\const.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+Win32_Interop.lib(Win32_ANSI.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_ANSI.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+Win32_Interop.lib(Win32_Common.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_Common.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+Win32_Interop.lib(Win32_Error.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_Error.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+Win32_Interop.lib(Win32_EventLog.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_EventLog.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+Win32_Interop.lib(Win32_FDAPI.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_FDAPI.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+Win32_Interop.lib(Win32_fdapi_crt.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_fdapi_crt.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+Win32_Interop.lib(Win32_RedisLog.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_RedisLog.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+Win32_Interop.lib(win32_rfdmap.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(win32_rfdmap.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+Win32_Interop.lib(Win32_Time.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_Time.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+Win32_Interop.lib(Win32_variadicFunctor.obj) : warning LNK4099: 未找到 PDB“Win32_Interop.pdb”(使用“Win32_Interop.lib(Win32_variadicFunctor.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\Win32_Interop.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+hiredis.lib(hiredis.obj) : warning LNK4099: 未找到 PDB“hiredis.pdb”(使用“hiredis.lib(hiredis.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\hiredis.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+hiredis.lib(net.obj) : warning LNK4099: 未找到 PDB“hiredis.pdb”(使用“hiredis.lib(net.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\hiredis.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+hiredis.lib(sds.obj) : warning LNK4099: 未找到 PDB“hiredis.pdb”(使用“hiredis.lib(sds.obj)”或在“D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\hiredis.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+  StatusServer.vcxproj -> D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\x64\Debug\StatusServer.exe
+  D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\config.ini
+  复制了 1 个文件
+  D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\mysqlcppconn-10-vs14.dll
+  D:\githubClone\laiotian_Demo\laiotianServer\StatusServer\mysqlcppconnx-2-vs14.dll
+  复制了 2 个文件
